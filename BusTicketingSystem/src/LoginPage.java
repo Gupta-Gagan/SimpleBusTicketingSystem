@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class LoginPage {
+public class LoginPage extends CRUD {
 
     Scanner sc = new Scanner(System.in);
     String UserName;
@@ -11,8 +11,8 @@ public class LoginPage {
 
     LoginPage(){}
 
-    LoginPage(String name, String pass){
-        this.ID = name;
+    LoginPage(String name, int age, int noofperson, String pass ){
+        super(name,age,noofperson);
         this.PASSWORD = pass;
     }
 
@@ -26,9 +26,9 @@ public class LoginPage {
 
     public void getInfo(){
         System.out.println("***********************  Welcome To Register Page  *******************");
-        System.out.println("Set your Name: ");
+        System.out.print("Set your Name: ");
         UserName = sc.next();
-        System.out.println("Set your Password: ");
+        System.out.print("Set your Password: ");
         UserPassword = sc.next();
     }
 
